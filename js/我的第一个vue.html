@@ -6,8 +6,22 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 </head>
 <body>
+<!--
+注意区分js表达式和js代码(语句)
+1一个表达式会生成一个值，可以放在任何一个需要值的地方
+(1). a a+b demo(1) 三元表达式
+2代码
+(1). if(){}
+(2). for(){}
+js表达式是特殊js语句因为会产生值
+
+Vue实例在真实开发中只有一个 会配合组建使用
+{{xxx}}要写js表达式切xxx可以自动读取到data全部属性
+data数据改变那么数据也会改变
+-->
 <div class="root">
-    <h1>hello,{{name}},{{address}} 2</h1>
+    <h1>hello,{{name}},{{address}},{{Date.now()}} 2</h1>
+
 </div>
 <div class="root">
     <h1>hello,{{name}} 1</h1>
@@ -21,6 +35,7 @@
         //el用于指定当前Vue为谁工作，值通常为Css选择器
         //data用于存储数据，数据仅供el指定容器使用
         //vue一个对象就可以给一个容器用
+        //容器和组件一一对应
         data: {
             name:'尚硅谷',
             address:'上海'
