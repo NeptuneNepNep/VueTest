@@ -6,16 +6,21 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 </head>
 <body>
-<div id="root">
-    <h1>hello,{{name}}</h1>
+<div class="root">
+    <h1>hello,{{name}} 2</h1>
+</div>
+<div class="root">
+    <h1>hello,{{name}} 1</h1>
+
 </div>
 <script>
     Vue.config.productionTip = false;
     //创建vue实例
     const x = new Vue({
-        el:'#root',
+        el:'.root',
         //el用于指定当前Vue为谁工作，值通常为Css选择器
         //data用于存储数据，数据仅供el指定容器使用
+        //vue一个对象就可以给一个容器用
         data: {
             name:'尚硅谷'
 
